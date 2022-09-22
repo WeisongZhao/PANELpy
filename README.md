@@ -12,26 +12,11 @@
 <p>
 <h1 align="center">PANEL<font color="#b07219">py</font></h1>
 <h6 align="right">v0.4.6</h6>
-<h5 align="center">rFRC mapping and PANEL pinpointing with with Python.</h5>
+<h5 align="center">rFRC mapping and PANEL pinpointing with Python.</h5>
 </p>
 <br>
-
-<p>
-<img src='./img/splash.png' align="left" width=180>
-</p>
-
 
 rFRC (rolling Fourier ring correlation) mapping and simplified PANEL (Pixel-level ANalysis of Error Locations) (w/o RSM) pinpointing. This repository will be in continued development. The full PANEL can be found in [PANELM](https://github.com/WeisongZhao/PANELM). If you find this useful, please cite the corresponding publication. [Weisong Zhao et al. Quantitatively mapping local quality at super-resolution scale by rolling Fourier ring correlation, <!-- Nature Methods -->, X, XXX-XXX (2022)](https://www.nature.com/nmeth/). More details on [demo.ipynb](https://github.com/WeisongZhao/PANELpy/blob/main/demo.ipynb). If it helps your research, please cite our work in your publications. 
-
-<br>
-<br>
-<br>
-
-<p>
-<img src='./img/imagej-128.png' align="right" width=50>
-</p>
-<br>
-
 
 More details on [PANELM Wiki](https://github.com/WeisongZhao/PANELM/wiki/) & [PANELJ Wiki](https://github.com/WeisongZhao/PANELJ/wiki/).
 
