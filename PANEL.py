@@ -9,7 +9,7 @@ import datetime
 def PANEL(stack, pixelsize = 30.25, backgroundIntensity = 5, skip = 1, blockSize = 64, \
           driftCorrection = False, amedianfilter = True, EnableOtsu = True):
     '''
-    PANEL is a filtered rFRC map, for biologists to qualitatively pinpoint regions with low reliability as a concise visualization
+    rFRC mapping and PANEL pinponting
 
     Parameters
     ----------
@@ -30,7 +30,7 @@ def PANEL(stack, pixelsize = 30.25, backgroundIntensity = 5, skip = 1, blockSize
     '''
     print('PANEL estimation start...')
     start_time = datetime.datetime.now()
-    print('High-resolution fSNR estimation...')
+    print('High-resolution rFRC estimation...')
     rFRCmap = fSNRmap(stack, pixelsize, backgroundIntensity, skip, blockSize, driftCorrection, amedianfilter)
     PANELs = otsu(rFRCmap, EnableOtsu)
     absolute_value = caculate_global(rFRCmap)
