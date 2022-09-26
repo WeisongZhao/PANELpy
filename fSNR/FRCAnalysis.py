@@ -41,24 +41,25 @@ def FRCAnalysis(imA, imB, pixelSize = 30.25, correctDrift = False, theta = 0, me
         print("applied drift correction of %f nm in x and and %f nm in y.\n" 
               % (drift[0] * pixelSize, drift[1] * pixelSize))
         
-    smallAngles, largeAngles, threeSigma, fiveSigma = perform_FRC(fftA, fftB, h, w, theta)
+    smallAngles, largeAngles, threeSigma, fiveSigma, twoSigma = perform_FRC(fftA, fftB, h, w, theta)
     sSmallAngles = meanFilter(smallAngles, meanFilterwidth)
     sLargeAngles = meanFilter(largeAngles, meanFilterwidth)
     
-    LargeAnglesResolution = np.ones([3,2]) * -1
-    smallAnglesResolution = np.ones([3,2]) * -1
+    LargeAnglesResolution = np.ones([4,2]) * -1
+    smallAnglesResolution = np.ones([4,2]) * -1
     fixedthreshold = np.ones(smallAngles.shape[0])/7.
     
     LargeAnglesResolution[0] = findIntercept(sLargeAngles, fixedthreshold, pixelSize)
     LargeAnglesResolution[1] = findIntercept(sLargeAngles, threeSigma, pixelSize)
     LargeAnglesResolution[2] = findIntercept(sLargeAngles, fiveSigma, pixelSize)
+    LargeAnglesResolution[3] = findIntercept(sLargeAngles, twoSigma, pixelSize)
     
     smallAnglesResolution[0] = findIntercept(sSmallAngles, fixedthreshold, pixelSize)
     smallAnglesResolution[1] = findIntercept(sSmallAngles, threeSigma, pixelSize)
     smallAnglesResolution[2] = findIntercept(sSmallAngles, fiveSigma, pixelSize)
+    smallAnglesResolution[3] = findIntercept(sSmallAngles, twoSigma, pixelSize)
     
-    
-    return sSmallAngles, sLargeAngles, threeSigma, fiveSigma, smallAnglesResolution, LargeAnglesResolution
+    return sSmallAngles, sLargeAngles, threeSigma, fiveSigma, twoSigma, smallAnglesResolution, LargeAnglesResolution
 
 
 def checkArguments(imA, imB, theta):

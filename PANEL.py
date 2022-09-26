@@ -9,7 +9,7 @@ import datetime
 def PANEL(stack, pixelsize = 30.25, backgroundIntensity = 5, skip = 1, blockSize = 64, \
           driftCorrection = False, amedianfilter = True, EnableOtsu = True):
     '''
-    rFRC mapping and PANEL pinponting 
+    PANEL is a filtered rFRC map, for biologists to qualitatively pinpoint regions with low reliability as a concise visualization
 
     Parameters
     ----------

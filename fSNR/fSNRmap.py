@@ -66,24 +66,19 @@ def fSNRmap(stack, pixelsize = 30.25, backgroundIntensity = 5, skip = 1, blockSi
             if ((suming) > (BI)):
                 image1_ROI = image1_ROI / np.max(image1_ROI)
                 image2_ROI = image2_ROI / np.max(image2_ROI)
-                __, largeAngles, threeSigma, fiveSigma, __, res = FRCAnalysis(image1_ROI, image2_ROI, pixelsize, correctDrift)
-                threesigma_resolution = res[1,0]
+                __, largeAngles, threeSigma, fiveSigma, twoSigma, __, res = FRCAnalysis(image1_ROI, image2_ROI, pixelsize, correctDrift)
+                [fixed_resolution, threesigma_resolution, fivesigma_resolution, twosigma_resolution] = res[:,0]
                 if not math.isnan(threesigma_resolution) and not math.isinf(threesigma_resolution) and not(threesigma_resolution < 0):
-                    for xxsum in range(skip):
-                        for yysum in range(skip):
-                            rFRC_map[xstart + xxsum, ystart + yysum] = threesigma_resolution
-                else:
-                    fivesigma_resolution = res[2,0]
-                    if not math.isnan(fivesigma_resolution) and not math.isinf(fivesigma_resolution) and not(fivesigma_resolution < 0):
-                        for xxsum in range(skip):
-                            for yysum in range(skip):
-                                rFRC_map[xstart + xxsum, ystart + yysum] = fivesigma_resolution
-                    else:
-                        fixed_resolution = res[0,0]
-                        if not math.isnan(fixed_resolution) and not math.isinf(fixed_resolution)and not(fixed_resolution < 0):
-                            for xxsum in range(skip):
-                                for yysum in range(skip):
-                                    rFRC_map[xstart + xxsum, ystart + yysum] = fixed_resolution
+                    resolution = threesigma_resolution * (3 / 3) * (3 / 3)
+                elif not math.isnan(fivesigma_resolution) and not math.isinf(fivesigma_resolution) and not(fivesigma_resolution < 0):
+                    resolution = fivesigma_resolution * (3 / 5) * (3 / 5)
+                elif not math.isnan(twosigma_resolution) and not math.isinf(twosigma_resolution) and not(twosigma_resolution < 0):
+                    resolution = twosigma_resolution * (3 / 2) * (3 / 2)
+                # elif not math.isnan(fixed_resolution) and not math.isinf(fixed_resolution)and not(fixed_resolution < 0):
+                #     resolution = fixed_resolution                    
+                for xxsum in range(skip):
+                    for yysum in range(skip):
+                        rFRC_map[xstart + xxsum, ystart + yysum] = resolution
     if amedianfilter:
         rFRC_map = AMF(rFRC_map)
     return rFRC_map

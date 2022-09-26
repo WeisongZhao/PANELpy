@@ -16,6 +16,7 @@ def perform_FRC(fftA, fftB, h, w, theta):
     largeAngles = np.zeros(rMax)
     threeSigma = np.zeros(rMax)
     fiveSigma = np.zeros (rMax)
+    twoSigma = np.zeros (rMax)
     
     #init local vars
     corr_largeAngles = np.zeros(rMax, dtype = 'complex128')
@@ -34,6 +35,7 @@ def perform_FRC(fftA, fftB, h, w, theta):
             if (r < rMax):
                 threeSigma[r] += 1
                 fiveSigma[r] += 1
+                twoSigma[r] += 1
                # print("value of theta is %f" %theta)
              #   print("angle of data point equals: %f" % np.arctan(abs(y-yc)/ (abs(x - xc) + float_info.epsilon)))
                 if (theta == 0 or np.arctan(abs(y-yc)/ (abs(x - xc) + float_info.epsilon)) > theta ):
@@ -50,6 +52,7 @@ def perform_FRC(fftA, fftB, h, w, theta):
     smallAngles = abs(corr_smallAngles) / np.sqrt(absA_smallAngles*absB_smallAngles + float_info.epsilon)
     threeSigma = 3 / np.sqrt(threeSigma / 2)
     fiveSigma = 5 / np.sqrt(fiveSigma / 2)
+    twoSigma = 2 / np.sqrt(fiveSigma / 2)
     
     #set values higher than 1 to 1.
     for i in range(rMax):
@@ -57,5 +60,7 @@ def perform_FRC(fftA, fftB, h, w, theta):
             threeSigma[i] = 1
         if (fiveSigma[i] > 1):
             fiveSigma[i] = 1
+        if (twoSigma[i] > 1):
+            twoSigma[i] = 1
 
-    return smallAngles, largeAngles, threeSigma, fiveSigma
+    return smallAngles, largeAngles, threeSigma, fiveSigma, twoSigma
