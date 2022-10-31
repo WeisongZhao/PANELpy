@@ -55,6 +55,13 @@ TO the [PANELM](https://github.com/WeisongZhao/PANELM)
 - v0.2.0 Initial rFRC mapping
 - v0.1.0 Initial FRC calculation
 
+## Dependency 
+
+- numpy
+- scipy
+- matplotlib
+- skimage
+
 
 <details>
 <summary><b>Plans</b></summary>
