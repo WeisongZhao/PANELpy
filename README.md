@@ -1,6 +1,6 @@
 
 [![website](https://img.shields.io/badge/website-up-green.svg)](https://weisongzhao.github.io/PANELpy/)
-[![paper](https://img.shields.io/badge/paper-nat.%20biotech-black.svg)](https://www.nature.com/nbt/)
+[![paper](https://img.shields.io/badge/paper-nat.%20commun.-black.svg)](https://www.nature.com/ncomms/)
 [![Github commit](https://img.shields.io/github/last-commit/WeisongZhao/PANELpy)](https://github.com/WeisongZhao/PANELpy/)
 [![License](https://img.shields.io/github/license/WeisongZhao/PANELpy)](https://github.com/WeisongZhao/PANELpy/blob/master/LICENSE/)<br>
 [![Twitter](https://img.shields.io/twitter/follow/weisong_zhao?label=weisong)](https://twitter.com/weisong_zhao/status/1370308101690118146)
@@ -16,9 +16,13 @@
 </p>
 <br>
 
-rFRC (rolling Fourier ring correlation) mapping and simplified PANEL (Pixel-level ANalysis of Error Locations) (w/o RSM) pinpointing. This repository will be in continued development. The full PANEL can be found in [PANELM](https://github.com/WeisongZhao/PANELM). If you find this useful, please cite the corresponding publication. [Weisong Zhao et al. Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, <!-- Nature Biotechnology -->, X, XXX-XXX (2022)](https://www.nature.com/nbt/). More details on [demo.ipynb](https://github.com/WeisongZhao/PANELpy/blob/main/demo.ipynb). If it helps your research, please cite our work in your publications. 
+rFRC (rolling Fourier ring correlation) mapping and simplified PANEL (Pixel-level ANalysis of Error Locations) (w/o RSM) pinpointing. This repository will be in continued development. The full PANEL can be found in [PANELM](https://github.com/WeisongZhao/PANELM). If you find this useful, please cite the corresponding publication. [Weisong Zhao et al. Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, <!-- Nature Biotechnology -->, X, XXX-XXX (2022)](https://doi.org/10.1101/2022.12.01.518675). More details on [demo.ipynb](https://github.com/WeisongZhao/PANELpy/blob/main/demo.ipynb). If it helps your research, please cite our work in your publications. 
 
-More details on [PANELM Wiki](https://github.com/WeisongZhao/PANELM/wiki/) & [PANELJ Wiki](https://github.com/WeisongZhao/PANELJ/wiki/).
+See also [PANELM Wiki](https://github.com/WeisongZhao/PANELM/wiki/) & [PANELJ Wiki](https://github.com/WeisongZhao/PANELJ/wiki/).
+
+
+If you are not a Python user, you can have a try on the imagej version: [PANELJ](https://github.com/WeisongZhao/PANELJ), or the MATLAB version: [PANELpy](https://github.com/WeisongZhao/PANELM).
+
 
 ## Usages of rFRC and PANEL in specific
 
@@ -61,6 +65,11 @@ TO the [PANELM](https://github.com/WeisongZhao/PANELM)
 - scipy
 - matplotlib
 - skimage
+
+## Related links: 
+- ImageJ version: [PANELJ](https://github.com/WeisongZhao/PANELJ/)
+- MATLAB version: [PANELM](https://github.com/WeisongZhao/PANELM/)
+- **Preprint:** [Weisong Zhao et al., Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, bioRxiv (2022).](https://doi.org/10.1101/2022.12.01.518675)
 
 
 <details>
