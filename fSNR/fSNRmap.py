@@ -69,13 +69,15 @@ def fSNRmap(stack, pixelsize = 30.25, backgroundIntensity = 5, skip = 1, blockSi
                 __, largeAngles, threeSigma, fiveSigma, twoSigma, __, res = FRCAnalysis(image1_ROI, image2_ROI, pixelsize, correctDrift)
                 [fixed_resolution, threesigma_resolution, fivesigma_resolution, twosigma_resolution] = res[:,0]
                 if not math.isnan(threesigma_resolution) and not math.isinf(threesigma_resolution) and not(threesigma_resolution < 0):
-                    resolution = threesigma_resolution * (3 / 3) * (3 / 3)
+                    resolution = threesigma_resolution 
                 elif not math.isnan(fivesigma_resolution) and not math.isinf(fivesigma_resolution) and not(fivesigma_resolution < 0):
-                    resolution = fivesigma_resolution * (3 / 5) * (3 / 5)
+                    resolution = fivesigma_resolution / (np.array(25/9))
                 elif not math.isnan(twosigma_resolution) and not math.isinf(twosigma_resolution) and not(twosigma_resolution < 0):
-                    resolution = twosigma_resolution * (3 / 2) * (3 / 2)
+                    resolution = twosigma_resolution / (np.array(4/9))
                 # elif not math.isnan(fixed_resolution) and not math.isinf(fixed_resolution)and not(fixed_resolution < 0):
-                #     resolution = fixed_resolution                    
+                #     resolution = fixed_resolution *(np.array(1.143))
+                if resolution <pixelsize*2.3:
+                    resolution=pixelsize*2.3
                 for xxsum in range(skip):
                     for yysum in range(skip):
                         rFRC_map[xstart + xxsum, ystart + yysum] = resolution
