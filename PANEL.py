@@ -10,7 +10,11 @@ def PANEL(stack, pixelsize = 30.25, backgroundIntensity = 5, skip = 1, blockSize
           driftCorrection = False, amedianfilter = True, EnableOtsu = True):
     '''
     rFRC mapping and PANEL pinponting
-
+    Weisong Zhao et al. Quantitatively mapping local quality of 
+    super-resolution microscopy by rolling Fourier ring correlation
+    , Light: Science & Applications (2023).
+    https://doi.org/10.1038/s41377-023-01321-0.
+    
     Parameters
     ----------
     stack : input two images to be evaluated, ndarray, shape (2, M, N).

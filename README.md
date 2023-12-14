@@ -1,8 +1,10 @@
 
 [![website](https://img.shields.io/badge/website-up-green.svg)](https://weisongzhao.github.io/PANELpy/)
-[![paper](https://img.shields.io/badge/paper-light:%20sci.%20appl.-black.svg)](https://www.nature.com/lsa/)
 [![Github commit](https://img.shields.io/github/last-commit/WeisongZhao/PANELpy)](https://github.com/WeisongZhao/PANELpy/)
+[![Github All Releases](https://img.shields.io/github/downloads/WeisongZhao/PANELpy/total.svg)](https://github.com/WeisongZhao/PANELpy/releases/tag/v0.4.6/)
 [![License](https://img.shields.io/github/license/WeisongZhao/PANELpy)](https://github.com/WeisongZhao/PANELpy/blob/master/LICENSE/)<br>
+[![paper](https://img.shields.io/badge/paper-light:%20sci.%20appl.-black.svg)](https://doi.org/10.1038/s41377-023-01321-0)
+[![post](https://img.shields.io/badge/post-behind%20the%20paper-black.svg)](https://communities.springernature.com/posts/a-nice-piece-of-the-puzzle-for-super-resolution-microscopy)<br>
 [![Twitter](https://img.shields.io/twitter/follow/weisong_zhao?label=weisong)](https://twitter.com/weisong_zhao/status/1370308101690118146)
 [![GitHub watchers](https://img.shields.io/github/watchers/WeisongZhao/PANELpy?style=social)](https://github.com/WeisongZhao/PANELpy/) 
 [![GitHub stars](https://img.shields.io/github/stars/WeisongZhao/PANELpy?style=social)](https://github.com/WeisongZhao/PANELpy/) 
@@ -16,7 +18,7 @@
 </p>
 <br>
 
-rFRC (rolling Fourier ring correlation) mapping and simplified PANEL (Pixel-level ANalysis of Error Locations) (w/o RSM) pinpointing. This repository will be in continued development. The full PANEL can be found in [PANELM](https://github.com/WeisongZhao/PANELM). If you find this useful, please cite the corresponding publication. [Weisong Zhao et al. Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, <!-- Nature Biotechnology -->, X, XXX-XXX (2022)](https://doi.org/10.1101/2022.12.01.518675). More details on [demo.ipynb](https://github.com/WeisongZhao/PANELpy/blob/main/demo.ipynb). If it helps your research, please cite our work in your publications. 
+rFRC (rolling Fourier ring correlation) mapping and simplified PANEL (Pixel-level ANalysis of Error Locations) (w/o RSM) pinpointing. This repository will be in continued development. The full PANEL can be found in [PANELM](https://github.com/WeisongZhao/PANELM). If you find this useful, please cite the corresponding publication. [Weisong Zhao et al. Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, Light: Science & Applications (2023)](https://doi.org/10.1038/s41377-023-01321-0). More details on [demo.ipynb](https://github.com/WeisongZhao/PANELpy/blob/main/demo.ipynb). If it helps your research, please cite our work in your publications. 
 
 See also [PANELM Wiki](https://github.com/WeisongZhao/PANELM/wiki/) & [PANELJ Wiki](https://github.com/WeisongZhao/PANELJ/wiki/).
 
@@ -69,7 +71,10 @@ TO the [PANELM](https://github.com/WeisongZhao/PANELM)
 ## Related links: 
 - ImageJ version: [PANELJ](https://github.com/WeisongZhao/PANELJ/)
 - MATLAB version: [PANELM](https://github.com/WeisongZhao/PANELM/)
-- **Preprint:** [Weisong Zhao et al., Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, bioRxiv (2022).](https://doi.org/10.1101/2022.12.01.518675)
+- **Some fancy results and comparisons:** [my website](https://weisongzhao.github.io/MyWeb2/portfolio-4-col.html)
+- **Further reading:** [#behind_the_paper](https://communities.springernature.com/posts/a-nice-piece-of-the-puzzle-for-super-resolution-microscopy).
+- **Publication:**[Weisong Zhao et al. Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, Light: Science & Applications (2023)](https://doi.org/10.1038/s41377-023-01321-0).
+- **Preprint:** [Weisong Zhao et al., Quantitatively mapping local quality of super-resolution microscopy by rolling Fourier ring correlation, bioRxiv (2022)](https://doi.org/10.1101/2022.12.01.518675).
 
 
 <details>
